@@ -7,8 +7,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static("portfolio"));
-
+app.use(express.static(__dirname + "/portfolio"));
 // Home route
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/portfolio/index.html");
